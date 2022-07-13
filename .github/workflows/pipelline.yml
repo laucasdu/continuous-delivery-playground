@@ -37,9 +37,9 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Build the application
-          un: |
-            npm ci
-            npm run build
+        run: |
+          npm ci
+          npm run build
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
